@@ -232,5 +232,27 @@
 				$(document).trigger("pageee-change", nextPage);
 			}, options.interval);
 		}
+		return {
+			next: function(){
+				$(document).trigger("pageee-change", nextPage);
+			},
+			prev: function(){
+				$(document).trigger("pageee-change", previousPage);
+			},
+			revealNext: function(){
+				nextPageElm.addClass("pageee-over");
+				nextPageElm.stop().animate({
+					top: parseInt(nextPageElm.css("top"), 10) - 40
+				});
+			},
+			revealPrev: function(){
+				previousPageElm.addClass("pageee-over");
+				previousPageElm.stop().animate({
+					top: parseInt(previousPageElm.css("top"), 10) + 40
+				});
+			},
+			$: $,
+			jQuery: $
+		}
 	};
 }(jQuery));
