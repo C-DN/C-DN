@@ -1,0 +1,18 @@
+.pageee {
+	height: 100%;
+}
+.pageee-hidden { 
+	z-index: 0;
+}
+.pageee-top {
+	top: -100%;
+}
+.pageee-bottom { 
+	top: 100%; 
+}
+.pageee-over { 
+	z-index: 200;
+}
+.pageee-shown {
+	z-index: 100;
+}
