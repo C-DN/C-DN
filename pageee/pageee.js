@@ -65,10 +65,12 @@
 			nextPageElm.addClass("pageee-bottom").css("top", "100%");
 			originalNextTop = parseInt(nextPageElm.css("top"), 10);
 			$("[data-pageee="+page+"]").toggleClass("pageee-shown pageee-hidden").removeClass("pageee-top pageee-bottom");
-			clearInterval(window.__pageeeAuto);
-			window.__pageeeAuto = window.setInterval(function(){
-				$(document).trigger("pageee-change", nextPage);
-			}, options.interval);
+			if(options.autoScroll){
+				clearInterval(window.__pageeeAuto);
+				window.__pageeeAuto = window.setInterval(function(){
+					$(document).trigger("pageee-change", nextPage);
+				}, options.interval);
+			}
 		});
 		
 		if(options.dragScroll){
