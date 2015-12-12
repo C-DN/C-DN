@@ -16,19 +16,22 @@
 		
 		if(!options.customStyles){
 			$("<style>                               \
-				.pageee-hidden {                       \
+				.pageee {                            \
+					height: 100%;                    \
+				}                                    \
+				.pageee-hidden {                     \
 					z-index: 0;                      \
 				}                                    \
-				.pageee-top {                          \
+				.pageee-top {                        \
 					top: -100%;                      \
 				}                                    \
-				.pageee-bottom {                       \
+				.pageee-bottom {                     \
 					top: 100%;                       \
 				}                                    \
-				.pageee-over {                         \
+				.pageee-over {                       \
 					z-index: 200;                    \
 				}                                    \
-				.pageee-shown {                        \
+				.pageee-shown {                      \
 					z-index: 100;                    \
 				}                                    \
 			</style>").appendTo("head");
